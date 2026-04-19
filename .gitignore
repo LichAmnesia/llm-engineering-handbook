@@ -1,0 +1,9 @@
+# PDF build intermediates (regenerable)
+_build/book.md
+_build/book.pdf
+_build/cover.png
+_build/pages/
+
+# macOS / editor junk
+.DS_Store
+*.swp

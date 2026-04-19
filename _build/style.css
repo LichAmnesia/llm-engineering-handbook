@@ -1,0 +1,201 @@
+/* ========= Page setup ========= */
+@page {
+  size: A5;
+  margin: 18mm 16mm 20mm 16mm;
+}
+
+@page :first {
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Source Han Serif 与 Noto Serif CJK 同族, Latin/digit 字形与 CJK 粗细匹配 */
+  font-family: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "SimSun", serif;
+  font-size: 10.5pt;
+  line-height: 1.85;
+  color: #1a1a1a;
+  /* CJK 文档标准两端对齐 */
+  text-align: justify;
+  text-justify: inter-ideograph;
+  /* CJK 自然断行 — 逗号后不硬断 */
+  word-break: normal;
+  overflow-wrap: break-word;
+  line-break: auto;
+  hanging-punctuation: allow-end;
+  font-weight: 400;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========= Cover page — full-bleed ========= */
+.cover-page {
+  width: 148mm;
+  height: 210mm;
+  margin: 0;
+  padding: 0;
+  page-break-after: always;
+  overflow: hidden;
+  position: relative;
+}
+.cover-page img {
+  display: block;
+  width: 148mm;
+  height: 210mm;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========= Title info page ========= */
+.cover-info-page {
+  page-break-before: always;
+  page-break-after: always;
+  text-align: center;
+  padding-top: 30mm;
+}
+.cover-info-page h1.book-title-main {
+  font-family: "Source Han Serif SC", "Songti SC", serif;
+  font-size: 24pt;
+  font-weight: 900;
+  margin: 1em 0 0.5em 0;
+  page-break-before: auto !important;
+  color: #0a0a0a;
+}
+.cover-info-page .subtitle {
+  font-family: "Source Han Sans SC", "PingFang SC", sans-serif;
+  font-size: 11pt;
+  color: #555;
+  margin: 1em 0 3em 0;
+  text-indent: 0;
+  font-weight: 300;
+}
+.cover-info-page .author {
+  font-family: "Source Han Serif SC", "Songti SC", serif;
+  font-size: 13pt;
+  margin: 6em 0 0.8em 0;
+  text-indent: 0;
+  letter-spacing: 0.3em;
+}
+.cover-info-page .date {
+  font-family: "Source Han Serif SC", "Songti SC", serif;
+  font-size: 10pt;
+  color: #888;
+  font-style: italic;
+  text-indent: 0;
+}
+
+/* ========= Chapter headings ========= */
+h1 {
+  font-family: "Source Han Serif SC", "Songti SC", serif;
+  font-size: 22pt;
+  font-weight: 900;
+  margin-top: 2em;
+  margin-bottom: 0.3em;
+  text-align: center;
+  page-break-before: always;
+  color: #0a0a0a;
+  word-break: normal;
+}
+
+h2 {
+  font-family: "Source Han Serif SC", "Songti SC", serif;
+  font-size: 15pt;
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  text-align: center;
+  color: #2a2a2a;
+  page-break-after: avoid;
+  word-break: normal;
+}
+
+h3 {
+  font-family: "Source Han Sans SC", "PingFang SC", sans-serif;
+  font-size: 13pt;
+  font-weight: 600;
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+  color: #2a2a2a;
+  page-break-after: avoid;
+  word-break: normal;
+}
+
+p {
+  margin: 0.7em 0;
+  text-indent: 2em;
+  /* 段内保持正常字重, 避免 bold 跳变带来的"字体波动"错觉 */
+  font-weight: 400;
+}
+
+/* 适度加粗, 不要过重 (避免 CJK bold 变"糊") */
+strong {
+  font-weight: 600;
+  color: #000;
+}
+
+em {
+  color: #444;
+  font-style: italic;
+}
+
+blockquote {
+  margin: 1em 1em;
+  padding: 0.5em 1em;
+  border-left: 3px solid #999;
+  color: #333;
+  background: #fafafa;
+  font-style: normal;
+}
+blockquote p {
+  text-indent: 0;
+  margin: 0.3em 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2em 0;
+}
+
+ul, ol {
+  margin: 0.7em 0;
+  padding-left: 2em;
+}
+li {
+  margin: 0.3em 0;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1em auto;
+  font-size: 9.5pt;
+}
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 0.4em 0.8em;
+}
+table th {
+  background: #f0f0f0;
+  font-weight: 700;
+}
+
+code {
+  font-family: "SF Mono", monospace;
+  font-size: 9.5pt;
+  background: #f5f5f5;
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+pre {
+  font-family: "SF Mono", monospace;
+  font-size: 9pt;
+  background: #f5f5f5;
+  padding: 0.8em;
+  border-radius: 3px;
+  overflow-x: auto;
+}
